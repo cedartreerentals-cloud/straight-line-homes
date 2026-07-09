@@ -450,8 +450,10 @@
         <input id="address" name="address" type="text" placeholder="Street, city, ZIP" required>
         <label for="notes">Notes (optional)</label>
         <textarea id="notes" name="notes" rows="3" placeholder="Condition, timeline, anything we should know"></textarea>
+        <input type="hidden" name="_subject" value="New lead from Straight Line website">
+        <input type="hidden" name="_next" value="https://www.straightlinehomebuyers.com/thank-you.html">
         <button type="submit" class="btn btn-solid">Request My Cash Offer</button>
-        <p class="form-note" id="formNote">This form isn't yet wired to send anywhere — connect it to your email service (e.g. Formspree) or CRM before publishing.</p>
+        <p class="form-note">We'll follow up by phone or email within 24 hours.</p>
       </form>
     </div>
   </div>
@@ -500,7 +502,11 @@
   }, {threshold:0.12});
   revealEls.forEach(el=>io.observe(el));
 
- 
+  function handleAddressSubmit(e){
+    e.preventDefault();
+    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    return false;
+  }
 </script>
 
 </body>
