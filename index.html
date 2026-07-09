@@ -441,7 +441,7 @@
         <p class="sub">Fill out the form and we'll follow up with a cash offer within 24 hours. No obligation, no pressure.</p>
         <p style="margin-top:26px; color:#fff;">Prefer to talk? Call <a href="tel:4195550142" style="color:#fff; text-decoration:underline;">(419) 555-0142</a></p>
       </div>
-      <form class="form" onsubmit="return handleSubmit(event)">
+      <form class="form" action="https://formspree.io/f/mqevvoww" method="POST">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Your full name" required>
         <label for="phone">Phone</label>
@@ -500,18 +500,7 @@
   }, {threshold:0.12});
   revealEls.forEach(el=>io.observe(el));
 
-  function handleSubmit(e){
-    e.preventDefault();
-    const note = document.getElementById('formNote');
-    note.textContent = "Thanks — this demo form doesn't send data yet. Connect it to Formspree, your CRM, or an email endpoint.";
-    note.style.color = '#E8A33D';
-    return false;
-  }
-  function handleAddressSubmit(e){
-    e.preventDefault();
-    document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-    return false;
-  }
+ 
 </script>
 
 </body>
