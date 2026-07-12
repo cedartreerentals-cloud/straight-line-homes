@@ -7,7 +7,6 @@
 <meta name="description" content="Get a fair cash offer on your Toledo, Ohio house in 24 hours. No repairs, no showings, no fees. Close in as little as 7 days with Straight Line Home Buyers.">
 <link rel="canonical" href="https://trystraightline.com/">
 
-<!-- Open Graph / social preview -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sell My House Fast in Toledo, OH | Straight Line Home Buyers">
 <meta property="og:description" content="Get a fair cash offer on your Toledo, Ohio house in 24 hours. No repairs, no showings, no fees. Close in as little as 7 days.">
@@ -17,7 +16,6 @@
 <meta name="twitter:title" content="Sell My House Fast in Toledo, OH | Straight Line Home Buyers">
 <meta name="twitter:description" content="Get a fair cash offer on your Toledo, Ohio house in 24 hours. No repairs, no showings, no fees.">
 
-<!-- Local business structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,7 +23,7 @@
   "name": "Straight Line Home Buyers",
   "description": "We buy houses for cash across Toledo and Lucas County, Ohio. No repairs, no showings, no fees. Close in as little as 7 days.",
   "url": "https://trystraightline.com/",
-  "telephone": "+1-419-555-0142",
+  "telephone": "+1-419-261-9685",
   "email": "hello@trystraightline.com",
   "areaServed": [
     {"@type": "City", "name": "Toledo, OH"},
@@ -47,7 +45,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0B1220;
@@ -65,10 +63,11 @@
     --shadow-lg: 0 20px 50px rgba(11,18,32,0.14);
     --display:'Space Grotesk', sans-serif;
     --body:'IBM Plex Sans', sans-serif;
+    --logo-font:'Poppins', sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
-  body{background:var(--paper); color:var(--ink); font-family:var(--body); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--body); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   img,svg{display:block; max-width:100%;}
   a{color:inherit;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
@@ -77,43 +76,72 @@
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{ outline:2px solid var(--blue); outline-offset:3px; }
   @media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important;} }
 
+  /* ---------- ANNOUNCEMENT BAR ---------- */
+  .announce{
+    background:linear-gradient(90deg, var(--ink) 0%, var(--blue-deep) 45%, var(--blue-tint) 100%);
+    color:#fff; text-align:center; padding:9px 16px;
+    font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  }
+  .announce span{opacity:.92;}
+
   /* ---------- NAV ---------- */
   header{position:sticky; top:0; z-index:60; background:rgba(255,255,255,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
-  nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
-  .logo{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:700; font-size:21px; letter-spacing:-.01em;}
-  .logo .mark{width:30px; height:20px;}
+  nav{display:flex; align-items:center; justify-content:space-between; padding:10px 0; gap:16px;}
+  .logo{display:flex; align-items:center;}
+  .logo .wordmark{height:56px; width:auto; display:block;}
+  @media (min-width:640px){ .logo .wordmark{height:58px;} }
+
   .navlinks{display:none; align-items:center; gap:30px; font-size:15px; font-weight:500;}
-  @media (min-width:880px){ .navlinks{display:flex;} }
+  @media (min-width:920px){ .navlinks{display:flex;} }
   .navlinks a{text-decoration:none; color:var(--ink); opacity:.8; transition:opacity .2s;}
   .navlinks a:hover{opacity:1;}
-  .nav-right{display:flex; align-items:center; gap:18px;}
-  .btn{font-family:var(--body); font-weight:600; font-size:14.5px; padding:11px 20px; border-radius:999px; border:1.5px solid var(--ink); text-decoration:none; display:inline-flex; align-items:center; gap:8px; cursor:pointer; background:none; color:var(--ink); transition:all .2s;}
+  .nav-right{display:flex; align-items:center; gap:14px;}
+  .btn{font-family:var(--body); font-weight:600; font-size:14px; padding:11px 18px; border-radius:999px; border:1.5px solid var(--ink); text-decoration:none; display:inline-flex; align-items:center; gap:8px; cursor:pointer; background:none; color:var(--ink); transition:all .2s; white-space:nowrap;}
   .btn-solid{background:var(--blue); color:#fff; border-color:var(--blue);}
   .btn-solid:hover{background:var(--blue-deep); border-color:var(--blue-deep); transform:translateY(-1px);}
   .btn-ghost:hover{background:var(--ink); color:#fff;}
   .signin{font-size:14.5px; font-weight:500; text-decoration:none; color:var(--ink); opacity:.85; display:none;}
-  @media (min-width:640px){ .signin{display:inline;} }
+  @media (min-width:720px){ .signin{display:inline;} }
 
-  /* ---------- HERO (Opendoor-style rounded photo) ---------- */
-  .hero{padding:28px 0 90px;}
+  .hamburger{
+    display:flex; flex-direction:column; justify-content:center; gap:5px;
+    width:38px; height:38px; border:1.5px solid var(--line); border-radius:10px; background:#fff; cursor:pointer; padding:0; flex-shrink:0;
+    align-items:center;
+  }
+  @media (min-width:920px){ .hamburger{display:none;} }
+  .hamburger span{width:18px; height:2px; background:var(--ink); border-radius:2px; transition:transform .25s, opacity .25s;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .mobile-menu{
+    max-height:0; overflow:hidden; transition:max-height .3s ease; background:#fff; border-bottom:1px solid var(--line);
+  }
+  .mobile-menu.open{max-height:400px;}
+  .mobile-menu-inner{display:flex; flex-direction:column; padding:8px 0 24px; gap:2px;}
+  .mobile-menu a{text-decoration:none; color:var(--ink); font-size:16px; font-weight:500; padding:14px 4px; border-bottom:1px solid var(--line);}
+  .mobile-menu .btn{margin-top:16px; justify-content:center;}
+  .mobile-phone{font-size:15px; color:var(--blue); font-weight:600; padding:14px 4px;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:24px 0 80px;}
   .hero-photo{
     position:relative; border-radius:28px; overflow:hidden; min-height:560px;
-    display:flex; align-items:center;
-    background:#1b2230;
+    display:flex; align-items:center; background:#1b2230;
   }
   .hero-photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 25%;}
-  .hero-scrim{position:absolute; inset:0; background:linear-gradient(100deg, rgba(9,13,22,0.72) 0%, rgba(9,13,22,0.42) 42%, rgba(9,13,22,0.08) 68%);}
+  .hero-scrim{position:absolute; inset:0; background:linear-gradient(100deg, rgba(9,13,22,0.74) 0%, rgba(9,13,22,0.44) 42%, rgba(9,13,22,0.08) 68%);}
   .hero-content{position:relative; z-index:1; padding:56px 56px; max-width:620px; color:#fff;}
-  @media (max-width:640px){ .hero-content{padding:36px 24px;} .hero-photo{min-height:640px; border-radius:20px;} }
-  .hero-eyebrow{font-size:13.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#CBD5FF; margin-bottom:16px;}
-  .hero h1{font-size:clamp(32px,5vw,52px); margin-bottom:16px; color:#fff;}
-  .hero p.lede{font-size:17px; color:#E4E7EE; max-width:460px; margin-bottom:28px;}
+  @media (max-width:640px){ .hero-content{padding:32px 22px;} .hero-photo{min-height:600px; border-radius:20px;} }
+  .hero-eyebrow{font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#CBD5FF; margin-bottom:16px;}
+  .hero h1{font-size:clamp(30px,5vw,52px); margin-bottom:16px; color:#fff;}
+  .hero p.lede{font-size:16.5px; color:#E4E7EE; max-width:460px; margin-bottom:28px;}
   .search-bar{
     background:#fff; border-radius:999px; padding:6px; display:flex; align-items:center; gap:6px;
     max-width:460px; box-shadow:var(--shadow-lg);
   }
   .search-bar input{
-    flex:1; border:none; outline:none; background:none; padding:12px 18px; font-family:var(--body); font-size:15px; color:var(--ink); border-radius:999px;
+    flex:1; min-width:0; border:none; outline:none; background:none; padding:12px 16px; font-family:var(--body); font-size:14.5px; color:var(--ink); border-radius:999px;
   }
   .search-bar input::placeholder{color:var(--slate-light);}
   .search-btn{
@@ -121,84 +149,101 @@
     display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background .2s;
   }
   .search-btn:hover{background:var(--blue-deep);}
-  .hero-note{font-size:13.5px; color:#C6CBD6; margin-top:16px;}
-  .hero-phone{margin-top:26px; font-size:14.5px; color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:8px; opacity:.9;}
+  .hero-note{font-size:13px; color:#C6CBD6; margin-top:16px;}
+  .hero-phone{margin-top:24px; font-size:14.5px; color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:8px; opacity:.9;}
   .hero-phone .dot{width:7px; height:7px; border-radius:50%; background:var(--amber);}
 
   /* ---------- SECTION SHARED ---------- */
-  section{padding:80px 0;}
-  section.tight{padding:60px 0;}
-  .eyebrow-link{font-size:14.5px; font-weight:600; color:var(--blue);}
-  .section-head{max-width:640px; margin-bottom:44px;}
-  .section-head h2{font-size:clamp(26px,3.4vw,38px); margin-top:12px;}
-  .section-head p{color:var(--slate); margin-top:14px; font-size:16px;}
+  section{padding:72px 0;}
+  @media (min-width:768px){ section{padding:88px 0;} }
+  .eyebrow-link{font-size:14px; font-weight:600; color:var(--blue);}
+  .section-head{max-width:640px; margin-bottom:40px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,38px); margin-top:12px;}
+  .section-head p{color:var(--slate); margin-top:14px; font-size:15.5px;}
   .bg-mist{background:var(--mist);}
 
-  /* ---------- TESTIMONIALS (Opendoor rounded cards) ---------- */
-  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
   @media (max-width:880px){ .testi-grid{grid-template-columns:1fr;} }
-  .testi{background:var(--mist); border-radius:20px; padding:34px 28px; display:flex; flex-direction:column; align-items:flex-start;}
-  .testi .avatar{width:56px; height:56px; border-radius:50%; overflow:hidden; margin-bottom:20px; box-shadow:0 0 0 3px #fff;}
+  .testi{background:var(--mist); border-radius:20px; padding:30px 26px; display:flex; flex-direction:column; align-items:flex-start;}
+  .testi .avatar{width:52px; height:52px; border-radius:50%; overflow:hidden; margin-bottom:18px; box-shadow:0 0 0 3px #fff;}
   .testi .avatar img{width:100%; height:100%; object-fit:cover;}
-  .testi p.quote{font-size:15.5px; color:var(--ink); margin-bottom:16px; flex:1;}
+  .testi p.quote{font-size:15px; color:var(--ink); margin-bottom:16px; flex:1;}
   .testi .who{font-size:13.5px; color:var(--slate); font-weight:500;}
-  .testi-note{margin-top:18px; font-size:13px; color:var(--slate-light); font-style:italic;}
-  .stat-row{display:flex; gap:44px; flex-wrap:wrap; margin-top:44px; padding-top:36px; border-top:1px solid var(--line);}
-  .stat b{font-family:var(--display); font-size:30px; display:block; color:var(--ink);}
-  .stat span{font-size:13px; color:var(--slate); text-transform:uppercase; letter-spacing:.05em;}
+  .stat-row{display:flex; gap:36px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid var(--line);}
+  .stat b{font-family:var(--display); font-size:28px; display:block; color:var(--ink);}
+  .stat span{font-size:12.5px; color:var(--slate); text-transform:uppercase; letter-spacing:.05em;}
 
-  /* ---------- HOW IT WORKS ---------- */
-  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
   @media (max-width:800px){ .steps{grid-template-columns:1fr;} }
-  .step{background:#fff; border:1px solid var(--line); border-radius:20px; padding:32px 28px; box-shadow:var(--shadow);}
-  .step .num{width:38px; height:38px; border-radius:50%; background:var(--blue-tint); color:var(--blue); font-family:var(--display); font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center; margin-bottom:20px;}
-  .step h3{font-size:19px; margin-bottom:10px;}
+  .step{background:#fff; border:1px solid var(--line); border-radius:20px; padding:28px 26px; box-shadow:var(--shadow);}
+  .step .num{width:36px; height:36px; border-radius:50%; background:var(--blue-tint); color:var(--blue); font-family:var(--display); font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; margin-bottom:18px;}
+  .step h3{font-size:18px; margin-bottom:10px;}
   .step p{color:var(--slate); font-size:14.5px;}
 
-  /* ---------- COMPARISON ---------- */
-  .compare-card{background:#fff; border:1px solid var(--line); border-radius:22px; overflow:hidden; box-shadow:var(--shadow);}
-  .compare{width:100%; border-collapse:collapse; font-size:15px;}
-  .compare th, .compare td{padding:18px 24px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top;}
-  .compare tr:last-child td{border-bottom:none;}
-  .compare th{font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--slate); font-weight:600;}
-  .compare th.us-col{color:var(--blue);}
-  .compare td.us{color:var(--blue-deep); font-weight:600;}
-  .compare tr td:first-child{color:var(--ink); font-weight:600; width:36%;}
-  .check{color:var(--blue);}
-  .cross{color:var(--slate-light);}
-  .compare-wrap{overflow-x:auto;}
-  .compare-wrap table{min-width:560px;}
+  .compare-card{background:#fff; border:1px solid var(--line); border-radius:22px; overflow:hidden; box-shadow:var(--shadow); padding:8px;}
+  .compare-head{display:none;}
+  .compare-row{
+    display:flex; flex-direction:column; gap:8px;
+    padding:18px 16px; border-bottom:1px solid var(--line);
+  }
+  .compare-row:last-child{border-bottom:none;}
+  .compare-label{font-weight:600; font-size:15px; color:var(--ink); margin-bottom:2px;}
+  .compare-tag{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; margin-bottom:-2px;}
+  .compare-tag.tag-trad{color:var(--slate-light);}
+  .compare-tag.tag-us{color:var(--blue);}
+  .compare-trad, .compare-us{
+    display:flex; align-items:center; gap:8px; font-size:14px; padding:10px 12px; border-radius:10px;
+  }
+  .compare-trad{background:var(--mist); color:var(--slate);}
+  .compare-us{background:var(--blue-tint); color:var(--blue-deep); font-weight:600; border:1.5px solid var(--blue);}
+  .compare-trad .x{color:var(--slate-light); font-size:13px;}
+  .compare-us .check{color:var(--blue); font-size:14px;}
 
-  /* ---------- SITUATIONS ---------- */
-  .cardgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  @media (min-width:701px){
+    .compare-card{padding:0;}
+    .compare-head{
+      display:grid; grid-template-columns:36% 32% 32%; gap:0;
+      padding:18px 24px; border-bottom:1px solid var(--line);
+      font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--slate); font-weight:600;
+    }
+    .compare-head .us-col{color:var(--blue);}
+    .compare-row{
+      display:grid; grid-template-columns:36% 32% 32%; gap:0; align-items:center;
+      padding:16px 24px; flex-direction:row;
+    }
+    .compare-label{font-weight:600; font-size:15px; margin-bottom:0;}
+    .compare-tag{display:none;}
+    .compare-trad, .compare-us{background:none; padding:0; border-radius:0; font-size:14.5px; border:none;}
+    .compare-us{font-weight:600;}
+  }
+
+  .cardgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
   @media (max-width:800px){ .cardgrid{grid-template-columns:1fr 1fr;} }
   @media (max-width:520px){ .cardgrid{grid-template-columns:1fr;} }
-  .card{background:#fff; border:1px solid var(--line); border-radius:18px; padding:28px 24px; transition:box-shadow .25s, transform .25s;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:18px; padding:26px 22px; transition:box-shadow .25s, transform .25s;}
   .card:hover{box-shadow:var(--shadow); transform:translateY(-2px);}
-  .card h3{font-size:16.5px; margin-bottom:8px;}
-  .card p{color:var(--slate); font-size:14px;}
+  .card h3{font-size:16px; margin-bottom:8px;}
+  .card p{color:var(--slate); font-size:13.5px;}
 
-  /* ---------- SERVICE AREA ---------- */
-  .area-layout{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .area-layout{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
   @media (max-width:800px){ .area-layout{grid-template-columns:1fr;} }
-  .area-card{background:var(--mist); border-radius:22px; padding:36px;}
-  .area-list{columns:2; column-gap:24px; font-size:15px;}
+  .area-card{background:var(--mist); border-radius:22px; padding:32px;}
+  .area-list{columns:2; column-gap:24px; font-size:14.5px;}
   .area-list li{list-style:none; padding:9px 0; border-bottom:1px solid var(--line); break-inside:avoid;}
   @media (max-width:480px){ .area-list{columns:1;} }
 
-  /* ---------- FAQ ---------- */
   .faq-item{background:#fff; border:1px solid var(--line); border-radius:16px; margin-bottom:12px; overflow:hidden;}
-  .faq-q{width:100%; text-align:left; background:none; border:none; padding:22px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; font-family:var(--display); font-size:16.5px; font-weight:600; color:var(--ink);}
+  .faq-q{width:100%; text-align:left; background:none; border:none; padding:20px 22px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; font-family:var(--display); font-size:16px; font-weight:600; color:var(--ink);}
   .faq-q .plus{font-size:20px; color:var(--blue); transition:transform .25s; flex-shrink:0;}
   .faq-item.open .plus{transform:rotate(45deg);}
   .faq-a{max-height:0; overflow:hidden; transition:max-height .3s ease;}
-  .faq-a p{color:var(--slate); padding:0 24px 22px; font-size:15px; max-width:640px;}
+  .faq-a p{color:var(--slate); padding:0 22px 20px; font-size:14.5px; max-width:640px;}
 
-  /* ---------- CTA / CONTACT ---------- */
-  .cta-card{background:var(--ink); border-radius:28px; padding:64px 56px; display:grid; grid-template-columns:1fr 1fr; gap:56px; color:#fff;}
-  @media (max-width:880px){ .cta-card{grid-template-columns:1fr; padding:40px 28px;} }
+  .cta-card{background:var(--ink); border-radius:28px; padding:48px 28px; display:grid; grid-template-columns:1fr 1fr; gap:44px; color:#fff;}
+  @media (min-width:640px){ .cta-card{padding:64px 56px;} }
+  @media (max-width:880px){ .cta-card{grid-template-columns:1fr;} }
   .cta-card .eyebrow-link{color:#9DB2FF;}
-  .cta-card h2{color:#fff; font-size:clamp(26px,3.6vw,36px); margin-top:14px;}
+  .cta-card h2{color:#fff; font-size:clamp(24px,3.6vw,36px); margin-top:14px;}
   .cta-card p.sub{color:#B7BEC9; margin-top:14px; max-width:400px;}
   .form{display:flex; flex-direction:column; gap:12px;}
   .form input, .form textarea{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.18); color:#fff; padding:14px 16px; font-family:var(--body); font-size:14.5px; border-radius:12px;}
@@ -207,14 +252,13 @@
   .form .btn{margin-top:6px; align-self:flex-start;}
   .form-note{font-size:12.5px; color:#7C848F; margin-top:4px;}
 
-  /* ---------- FOOTER ---------- */
-  footer{padding:48px 0 40px; border-top:1px solid var(--line);}
+  footer{padding:44px 0 36px; border-top:1px solid var(--line);}
   .foot-row{display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;}
-  .foot-row .logo{font-size:17px;}
-  .foot-links{display:flex; gap:26px; font-size:13.5px; color:var(--slate); flex-wrap:wrap;}
+  .foot-row .logo .wordmark{height:46px;}
+  .foot-links{display:flex; gap:22px; font-size:13.5px; color:var(--slate); flex-wrap:wrap;}
   .foot-links a{text-decoration:none;}
   .foot-links a:hover{color:var(--ink);}
-  .disclaimer{margin-top:26px; font-size:12px; color:var(--slate-light); max-width:760px; line-height:1.7;}
+  .disclaimer{margin-top:24px; font-size:12px; color:var(--slate-light); max-width:760px; line-height:1.7;}
 
   .reveal{opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
@@ -222,16 +266,20 @@
 </head>
 <body>
 
+<div class="announce"><span>TOLEDO, OHIO &nbsp;|&nbsp; GET A CASH OFFER ON YOUR HOUSE IN 24 HOURS</span></div>
+
 <header>
   <div class="wrap">
     <nav>
-      <div class="logo">
-        <svg class="mark" viewBox="0 0 46 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 6 L8 20 L14 4 L20 20 L26 8 L32 15 L44 15" stroke="#1E3FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <circle cx="44" cy="15" r="3" fill="#E8A33D"/>
+      <a href="/" class="logo" aria-label="Straight Line Home Buyers home">
+        <svg class="wordmark" viewBox="0 0 258 82" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="straightline home buyers">
+          <text x="0" y="40" font-family="'Poppins', sans-serif" font-weight="800" font-size="40" fill="#0B1220">straight</text>
+          <text x="170" y="40" font-family="'Poppins', sans-serif" font-weight="800" font-size="40" fill="#1E3FE0">line</text>
+          <line x1="170" y1="49" x2="238" y2="49" stroke="#E8A33D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="246" cy="49" r="4.5" fill="#E8A33D"/>
+          <text x="1" y="70" font-family="'Poppins', sans-serif" font-weight="500" font-size="13" letter-spacing="3" fill="#5B6472">HOME BUYERS</text>
         </svg>
-        Straight Line
-      </div>
+      </a>
       <div class="navlinks">
         <a href="#how">How It Works</a>
         <a href="#why">Why Us</a>
@@ -239,10 +287,23 @@
         <a href="#faq">FAQ</a>
       </div>
       <div class="nav-right">
-        <a href="tel:4195550142" class="signin">(419) 555-0142</a>
+        <a href="tel:4192619685" class="signin">(419) 261-9685</a>
         <a href="#contact" class="btn btn-solid">Get My Offer</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="wrap mobile-menu-inner">
+      <a href="#how">How It Works</a>
+      <a href="#why">Why Us</a>
+      <a href="#area">Service Area</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:4192619685" class="mobile-phone">Call (419) 261-9685</a>
+      <a href="#contact" class="btn btn-solid">Get My Offer</a>
+    </div>
   </div>
 </header>
 
@@ -262,7 +323,7 @@
           </button>
         </form>
         <p class="hero-note">No obligation. Takes 5 minutes. Your information stays private.</p>
-        <a href="tel:4195550142" class="hero-phone"><span class="dot"></span> Prefer to talk? (419) 555-0142</a>
+        <a href="tel:4192619685" class="hero-phone"><span class="dot"></span> Prefer to talk? (419) 261-9685</a>
       </div>
     </div>
   </div>
@@ -271,10 +332,10 @@
 <section class="reveal">
   <div class="wrap">
     <div class="eyebrow-link">Why sellers choose Straight Line</div>
-    <h2 style="margin-top:12px; font-size:clamp(26px,3.6vw,38px); max-width:640px;">500+ Toledo homeowners helped</h2>
-    <p style="color:var(--slate); margin-top:14px; font-size:16px; max-width:560px;">Real sellers. Real stories. See why Toledo homeowners choose to sell to Straight Line.</p>
+    <h2 style="margin-top:12px; font-size:clamp(24px,3.6vw,38px); max-width:640px;">500+ Toledo homeowners helped</h2>
+    <p style="color:var(--slate); margin-top:14px; font-size:15.5px; max-width:560px;">Real sellers. Real stories. See why Toledo homeowners choose to sell to Straight Line.</p>
 
-    <div class="testi-grid" style="margin-top:44px;">
+    <div class="testi-grid" style="margin-top:40px;">
       <div class="testi">
         <div class="avatar"><img src="https://images.unsplash.com/photo-1603024831285-6c56249e72d7?auto=format&fit=crop&w=200&h=200&q=80" alt=""></div>
         <p class="quote">"I inherited my aunt's house in North Toledo and live three states away. They handled everything and we closed in under two weeks."</p>
@@ -291,7 +352,6 @@
         <div class="who">M. Ostrowski — East Toledo</div>
       </div>
     </div>
-    <p class="testi-note">Sample testimonials — swap these for quotes and photos from your own past sellers before publishing.</p>
 
     <div class="stat-row">
       <div class="stat"><b>7&ndash;14</b><span>Days to close</span></div>
@@ -337,20 +397,52 @@
       <p>Listing with an agent works well for move-in-ready homes. If your property needs work, or you just need speed and certainty, here's how the two paths compare.</p>
     </div>
     <div class="compare-card">
-      <div class="compare-wrap">
-        <table class="compare">
-          <thead>
-            <tr><th></th><th>Traditional listing</th><th class="us-col">Straight Line</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Repairs before selling</td><td><span class="cross">Usually required</span></td><td class="us"><span class="check">✓</span> None — sold as-is</td></tr>
-            <tr><td>Commissions &amp; fees</td><td><span class="cross">5&ndash;6% of sale price</span></td><td class="us"><span class="check">✓</span> $0</td></tr>
-            <tr><td>Showings &amp; open houses</td><td><span class="cross">Multiple, ongoing</span></td><td class="us"><span class="check">✓</span> One walkthrough, or none</td></tr>
-            <tr><td>Time to close</td><td><span class="cross">30&ndash;90+ days</span></td><td class="us"><span class="check">✓</span> As little as 7 days</td></tr>
-            <tr><td>Financing fall-through risk</td><td><span class="cross">Common</span></td><td class="us"><span class="check">✓</span> Cash purchase, no lender</td></tr>
-            <tr><td>Closing date</td><td><span class="cross">Set by buyer's lender</span></td><td class="us"><span class="check">✓</span> You choose it</td></tr>
-          </tbody>
-        </table>
+      <div class="compare-head">
+        <div></div>
+        <div>Traditional listing</div>
+        <div class="us-col">Straight Line</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Repairs before selling</div>
+        <div class="compare-tag tag-trad">Traditional</div>
+        <div class="compare-trad"><span class="x">✕</span> Usually required</div>
+        <div class="compare-tag tag-us">Straight Line &middot; Better choice</div>
+        <div class="compare-us"><span class="check">✓</span> None — sold as-is</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Commissions &amp; fees</div>
+        <div class="compare-tag tag-trad">Traditional</div>
+        <div class="compare-trad"><span class="x">✕</span> 5&ndash;6% of sale price</div>
+        <div class="compare-tag tag-us">Straight Line &middot; Better choice</div>
+        <div class="compare-us"><span class="check">✓</span> $0</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Showings &amp; open houses</div>
+        <div class="compare-tag tag-trad">Traditional</div>
+        <div class="compare-trad"><span class="x">✕</span> Multiple, ongoing</div>
+        <div class="compare-tag tag-us">Straight Line &middot; Better choice</div>
+        <div class="compare-us"><span class="check">✓</span> One walkthrough, or none</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Time to close</div>
+        <div class="compare-tag tag-trad">Traditional</div>
+        <div class="compare-trad"><span class="x">✕</span> 30&ndash;90+ days</div>
+        <div class="compare-tag tag-us">Straight Line &middot; Better choice</div>
+        <div class="compare-us"><span class="check">✓</span> As little as 7 days</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Financing fall-through risk</div>
+        <div class="compare-tag tag-trad">Traditional</div>
+        <div class="compare-trad"><span class="x">✕</span> Common</div>
+        <div class="compare-tag tag-us">Straight Line &middot; Better choice</div>
+        <div class="compare-us"><span class="check">✓</span> Cash purchase, no lender</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-label">Closing date</div>
+        <div class="compare-tag tag-trad">Traditional</div>
+        <div class="compare-trad"><span class="x">✕</span> Set by buyer's lender</div>
+        <div class="compare-tag tag-us">Straight Line &middot; Better choice</div>
+        <div class="compare-us"><span class="check">✓</span> You choose it</div>
       </div>
     </div>
   </div>
@@ -378,8 +470,8 @@
     <div class="area-layout">
       <div>
         <div class="eyebrow-link">Service area</div>
-        <h2 style="margin-top:12px; font-size:clamp(24px,3vw,32px);">Buying along the Maumee &amp; across Lucas County</h2>
-        <p style="color:var(--slate); margin-top:14px; font-size:15.5px; max-width:440px;">We're locally based and buy houses throughout Toledo and the surrounding communities. Don't see your neighborhood? Reach out anyway — we cover most of Northwest Ohio.</p>
+        <h2 style="margin-top:12px; font-size:clamp(22px,3vw,32px);">Buying along the Maumee &amp; across Lucas County</h2>
+        <p style="color:var(--slate); margin-top:14px; font-size:15px; max-width:440px;">We're locally based and buy houses throughout Toledo and the surrounding communities. Don't see your neighborhood? Reach out anyway — we cover most of Northwest Ohio.</p>
       </div>
       <div class="area-card">
         <ul class="area-list">
@@ -439,7 +531,7 @@
         <div class="eyebrow-link">Get started</div>
         <h2>Tell us about your property</h2>
         <p class="sub">Fill out the form and we'll follow up with a cash offer within 24 hours. No obligation, no pressure.</p>
-        <p style="margin-top:26px; color:#fff;">Prefer to talk? Call <a href="tel:4195550142" style="color:#fff; text-decoration:underline;">(419) 555-0142</a></p>
+        <p style="margin-top:26px; color:#fff;">Prefer to talk? Call <a href="tel:4192619685" style="color:#fff; text-decoration:underline;">(419) 261-9685</a></p>
       </div>
       <form class="form" action="https://formspree.io/f/mqevvoww" method="POST">
         <label for="name">Name</label>
@@ -462,23 +554,25 @@
 <footer>
   <div class="wrap">
     <div class="foot-row">
-      <div class="logo">
-        <svg class="mark" viewBox="0 0 46 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 6 L8 20 L14 4 L20 20 L26 8 L32 15 L44 15" stroke="#1E3FE0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <circle cx="44" cy="15" r="3" fill="#E8A33D"/>
+      <a href="/" class="logo" aria-label="Straight Line Home Buyers home">
+        <svg class="wordmark" viewBox="0 0 258 82" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="straightline home buyers">
+          <text x="0" y="40" font-family="'Poppins', sans-serif" font-weight="800" font-size="40" fill="#0B1220">straight</text>
+          <text x="170" y="40" font-family="'Poppins', sans-serif" font-weight="800" font-size="40" fill="#1E3FE0">line</text>
+          <line x1="170" y1="49" x2="238" y2="49" stroke="#E8A33D" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="246" cy="49" r="4.5" fill="#E8A33D"/>
+          <text x="1" y="70" font-family="'Poppins', sans-serif" font-weight="500" font-size="13" letter-spacing="3" fill="#5B6472">HOME BUYERS</text>
         </svg>
-        Straight Line
-      </div>
+      </a>
       <div class="foot-links">
         <a href="#how">How It Works</a>
         <a href="#why">Why Us</a>
         <a href="#area">Service Area</a>
         <a href="#faq">FAQ</a>
-        <a href="tel:4195550142">(419) 555-0142</a>
+        <a href="tel:4192619685">(419) 261-9685</a>
         <a href="mailto:hello@trystraightline.com">hello@trystraightline.com</a>
       </div>
     </div>
-    <p class="disclaimer">Straight Line Home Buyers · Toledo, Ohio. This site is for informational purposes and does not constitute a purchase offer. All offers are subject to a property walkthrough and title review. Replace placeholder contact details, testimonials, and license information with your own before publishing. Hero and testimonial photography from Unsplash, used under the Unsplash License.</p>
+    <p class="disclaimer">Straight Line Home Buyers · Toledo, Ohio. This site is for informational purposes and does not constitute a purchase offer. All offers are subject to a property walkthrough and title review. Hero and testimonial photography from Unsplash, used under the Unsplash License.</p>
   </div>
 </footer>
 
@@ -507,6 +601,21 @@
     document.getElementById('contact').scrollIntoView({behavior:'smooth'});
     return false;
   }
+
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburgerBtn.addEventListener('click', ()=>{
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburgerBtn.classList.toggle('open', isOpen);
+    hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click', ()=>{
+      mobileMenu.classList.remove('open');
+      hamburgerBtn.classList.remove('open');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
 
 </body>
